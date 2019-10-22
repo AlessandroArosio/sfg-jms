@@ -5,13 +5,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.UUID;
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class HelloWorldMessage {
+public class HelloWorldMessage implements Serializable {
+
+  private static final long serialVersionUID = -5103324544763518094L;
 
   private UUID id;
   private String message;
